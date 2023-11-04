@@ -2,9 +2,10 @@ $(document).ready(function(){
     const amny_id = {};
     $('input[type="checkbox"]').change(function(){
         if ($(this).is(':checked')){
-            amny_id[$(this).data('data-id')] = $(this).data('data-name')
+            amny_id[$(this).data('id')] = $(this).data('name')
         }else{
-            delete amny_id[$(this).data('data-id')];
+            delete amny_id[$(this).data('id')];
         }
+				$('.amenities h4').text(Object.values(amny_id).join(', '));
     });
 });
