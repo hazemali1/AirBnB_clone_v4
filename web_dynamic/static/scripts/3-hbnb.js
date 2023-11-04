@@ -23,7 +23,6 @@ $.ajax({
   url: 'http://0.0.0.0:5001/api/v1/places_search',
   Content-Type: 'application/json',
   data : '{}',
-  method: 'GET', 
   success: function(data) {
     for(let i = 0; i < data.length;i++){
       let place = data[i];
