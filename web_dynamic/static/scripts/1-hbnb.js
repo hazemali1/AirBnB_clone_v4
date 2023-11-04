@@ -6,6 +6,7 @@ $(document).ready(function(){
         }else{
             delete amny_id[$(this).data('id')];
         }
-				$('.amenities h4').text("helooooooooooooooooo");
+				let h4 = Object.values(amny_id);
+				$('.amenities h4').text(h4.join(', '));
     });
 });
